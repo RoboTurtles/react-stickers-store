@@ -1,7 +1,11 @@
+//components
+
 import './App.css';
 import React from 'react';
 import Navbar from './navbar';
 import Itembox from './itembox';
+
+//images
 import Components from './media/components.svg';
 import Hooks from './media/hooks.svg';
 import Enjoy_the_views from './media/enjoy-the-views.svg';
