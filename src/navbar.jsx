@@ -2,8 +2,7 @@ import React from 'react';
 import logo from './logo.png';
 import clsx from 'clsx';
 
-export default function Navbar() {
-  const [isActive, setIsActive] = React.useState('Storepage');
+export default function Navbar({isActive, setIsActive}) {
 
   return (
     <header className="fixed w-full h-16 flex items-center justify-between px-4 backdrop-blur-md bg-slate-800 bg-opacity-80">
@@ -15,7 +14,7 @@ export default function Navbar() {
         />
       </div>
       <div className="flex items-center space-x-4">
-        <a onClick={() => setIsActive('Storepage')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'Storepage', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
+        <a onClick={() => setIsActive('Store')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'Store', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
           Storepage
         </a>
         <a onClick={() => setIsActive('Shipping')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'Shipping', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
@@ -24,7 +23,7 @@ export default function Navbar() {
         <a onClick={() => setIsActive('About')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'About', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
           About
         </a>
-        <a onClick={() => setIsActive('Contact Us')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'Contact Us', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
+        <a onClick={() => setIsActive('Contact')} className={clsx({ 'text-teal-500 border-b-4 border-teal-300': isActive === 'Contact', 'text-gray-400 font-semibold hover:text-teal-300 transition duration-300': true })}>
           Contact Us
         </a>
       </div>
